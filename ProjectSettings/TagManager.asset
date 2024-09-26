@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Activator
+  - Arrow
   layers:
   - Default
   - TransparentFX
