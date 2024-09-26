@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class mpManager : MonoBehaviour
+public class MPManager : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
 
@@ -23,13 +23,13 @@ public class mpManager : MonoBehaviour
     {
         if (isPlayer)
         {
-            if (gameManager.instance.currentScore > 99)
+            if (GameManager.instance.currentScore > 99)
             {
-                gameManager.instance.currentScore -= 100;
+                GameManager.instance.currentScore -= 100;
                 if (currentFrame >= mpStates.Length - 1)
                 {
                     currentFrame = 0;
-                    gameManager.instance.playerAttack = true;
+                    GameManager.instance.playerAttack = true;
                     Debug.Log("player attack charged");
                 }
                 else
@@ -38,17 +38,17 @@ public class mpManager : MonoBehaviour
                     spriteRenderer.sprite = mpStates[currentFrame];
                 }
             }
-            
+
         }
         else
         {
-            if (gameManager.instance.opponentScore > 99)
+            if (GameManager.instance.opponentScore > 99)
             {
-                gameManager.instance.opponentScore -= 100;
+                GameManager.instance.opponentScore -= 100;
                 if (currentFrame >= mpStates.Length - 1)
                 {
                     currentFrame = 0;
-                    gameManager.instance.opponentAttack = true;
+                    GameManager.instance.opponentAttack = true;
                     Debug.Log("opponent attack charged");
                 }
                 else

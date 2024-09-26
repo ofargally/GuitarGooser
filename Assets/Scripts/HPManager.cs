@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class hpManager : MonoBehaviour
+public class HPManager : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     public Sprite[] hpStates;
@@ -18,9 +18,9 @@ public class hpManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.instance.playerAttack && !isPlayer)
+        if (GameManager.instance.playerAttack && !isPlayer)
         {
-            gameManager.instance.playerAttack = false;
+            GameManager.instance.playerAttack = false;
             if (currentFrame >= hpStates.Length - 1)
             {
                 Debug.Log("you win");
@@ -32,9 +32,9 @@ public class hpManager : MonoBehaviour
                 spriteRenderer.sprite = hpStates[currentFrame];
             }
         }
-        else if (gameManager.instance.opponentAttack && isPlayer)
+        else if (GameManager.instance.opponentAttack && isPlayer)
         {
-            gameManager.instance.opponentAttack = false;
+            GameManager.instance.opponentAttack = false;
             if (currentFrame >= hpStates.Length - 1)
             {
                 Debug.Log("opponent win");

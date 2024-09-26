@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pixel-art-male-techer-character-png_0: 2748761618376630378
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
