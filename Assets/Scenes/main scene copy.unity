@@ -1928,7 +1928,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1111343032}
-  - component: {fileID: 1111343031}
   - component: {fileID: 1111343033}
   m_Layer: 0
   m_Name: gameManager
@@ -1937,33 +1936,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1111343031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111343030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929376b4b9ab94de08c9dea120c0a622, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theMusic: {fileID: 1852212101}
-  songStartTime: 0
-  startPlaying: 0
-  theBS: {fileID: 1527997636}
-  currentScore: 0
-  opponentScore: 0
-  scorePerNote: 100
-  currentMultiplier: 0
-  multiplierTracker: 0
-  multiplierThresholds: 
-  scoreText: {fileID: 1791990394}
-  multiText: {fileID: 2046179001}
-  playerAttack: 0
-  opponentAttack: 0
-  gameOver: 0
 --- !u!4 &1111343032
 Transform:
   m_ObjectHideFlags: 0
@@ -1991,10 +1963,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f8ad0256c2e4d6aa798cedcf444d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
+  theMusic: {fileID: 1852212101}
   songStartTime: 0
   startPlaying: 0
-  beatScroller: {fileID: 0}
+  theBS: {fileID: 1527997636}
+  currentScore: 0
+  opponentScore: 0
+  scorePerNote: 100
+  currentMultiplier: 0
+  multiplierTracker: 0
+  multiplierThresholds: 
+  scoreText: {fileID: 1791990394}
+  multiText: {fileID: 2046179001}
+  playerAttack: 0
+  opponentAttack: 0
   gameOver: 0
 --- !u!1 &1142241336
 GameObject:
@@ -2341,6 +2323,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294892953}
   m_CullTransparentMesh: 0
+--- !u!1 &1336854639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336854640}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1336854640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336854639}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.5131793, y: 7.807629, z: 119.5699}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1852212102}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1392113487
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,7 +3020,7 @@ GameObject:
   - component: {fileID: 1852212102}
   - component: {fileID: 1852212101}
   m_Layer: 0
-  m_Name: GamesPlusJames - Rhythm Tutorial
+  m_Name: Song_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3117,12 +3131,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852212100}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.5131793, y: -7.807629, z: -119.5699}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1336854640}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1894841108
 GameObject:
@@ -4054,9 +4068,9 @@ SceneRoots:
   - {fileID: 1665987928}
   - {fileID: 1527997637}
   - {fileID: 1111343032}
-  - {fileID: 1852212102}
   - {fileID: 1085651027}
   - {fileID: 1605572182}
   - {fileID: 1142241338}
   - {fileID: 6669989}
   - {fileID: 1845292179}
+  - {fileID: 1336854640}
