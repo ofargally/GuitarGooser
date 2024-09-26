@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HPManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class HPManager : MonoBehaviour
             if (currentFrame >= hpStates.Length - 1)
             {
                 Debug.Log("you win");
+                SceneManager.LoadSceneAsync(2);
                 currentFrame = 0;
             }
             else
@@ -38,6 +40,7 @@ public class HPManager : MonoBehaviour
             if (currentFrame >= hpStates.Length - 1)
             {
                 Debug.Log("opponent win");
+                SceneManager.LoadSceneAsync(1);
                 currentFrame = 0;
             }
             else
