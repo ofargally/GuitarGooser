@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
-    public BeatScroller theBS;
-
     public int currentScore;
     public int opponentScore;
 
@@ -29,6 +27,9 @@ public class GameManager : MonoBehaviour
     public bool playerAttack;
     public bool opponentAttack;
     public bool gameOver;
+
+    public int playerHp;
+    public int enemyHp;
 
     void Awake()
     {
@@ -52,7 +53,6 @@ public class GameManager : MonoBehaviour
             if (Input.anyKeyDown)
             {
                 startPlaying = true;
-                theBS.hasStarted = true;
                 songStartTime = Time.time;
                 theMusic.Play();
             }
