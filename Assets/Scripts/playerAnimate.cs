@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-public class playerAnimate : MonoBehaviour
+public class PlayerAnimate : MonoBehaviour
 {
 
 
@@ -29,12 +29,9 @@ public class playerAnimate : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void PlayerHit()
+    public void PlayerHit()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            StartCoroutine(LoopThroughSprites(HitLeftSprites));
-        }
+        StartCoroutine(LoopThroughSprites(HitLeftSprites));
     }
     IEnumerator LoopThroughSprites(Sprite[] sprites)
     {

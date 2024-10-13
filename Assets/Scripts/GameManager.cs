@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
+    public PlayerAnimate player;
+    public PlayerAnimate enemy;
+
     public int currentScore;
     public int opponentScore;
 
@@ -73,7 +76,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadSceneAsync(1);
         }
 
-        if(enemyHp < 0)
+        if (enemyHp < 0)
         {
             Debug.Log("you win");
             SceneManager.LoadSceneAsync(2);
@@ -111,9 +114,12 @@ public class GameManager : MonoBehaviour
         {
             enemyHp -= scorePerNote * currentMultiplier;
         }
-        
-    }
 
+    }
+    public void AnimatePlayerHit()
+    {
+        player.PlayerHit();
+    }
     public void NoteMiss()
     {
         mp = 0;
