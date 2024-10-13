@@ -4,8 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
     public AudioSource theMusic;
+    public AudioSource playerHit1;
+    public AudioSource playerHit2;
+    public AudioSource playerUltraPunch;
+    public AudioSource damageSound;
     public float songStartTime;
 
     public bool startPlaying;
@@ -18,7 +21,6 @@ public class GameManager : MonoBehaviour
     public int currentScore;
     public int opponentScore;
 
-
     public int scorePerNote = 1;
 
     public int currentMultiplier;
@@ -26,7 +28,6 @@ public class GameManager : MonoBehaviour
     public int[] multiplierThresholds;
 
     public Text scoreText;
-
     public Text multiText;
 
     public bool playerAttack;
@@ -64,28 +65,32 @@ public class GameManager : MonoBehaviour
                 theMusic.Play();
             }
         }
-        //check if song is over, if so set game over to true
+
+        // Check if song is over, if so set game over to true
         if (startPlaying && !gameOver && Time.time - songStartTime >= theMusic.clip.length)
         {
             gameOver = true;
         }
 
-        if (playerHp < 0)
+        if (playerHp <= 0)
         {
-            Debug.Log("opponent win");
+            Debug.Log("Opponent wins");
             SceneManager.LoadSceneAsync(1);
         }
 
-        if (enemyHp < 0)
+        if (enemyHp <= 0)
         {
-            Debug.Log("you win");
+            Debug.Log("You win");
             SceneManager.LoadSceneAsync(2);
         }
 
         if (mp > 7)
         {
             playerAttack = true;
-            Debug.Log("player can attack now");
+        }
+        else
+        {
+            playerAttack = false;
         }
     }
 
@@ -93,6 +98,7 @@ public class GameManager : MonoBehaviour
     {
         mp++;
         Debug.Log("Hit on time");
+
         if (currentMultiplier - 1 < multiplierThresholds.Length)
         {
             multiplierTracker++;
@@ -102,7 +108,6 @@ public class GameManager : MonoBehaviour
                 multiplierTracker = 0;
                 currentMultiplier++;
             }
-
         }
 
         multiText.text = "Multiplier: x" + currentMultiplier;
@@ -110,13 +115,28 @@ public class GameManager : MonoBehaviour
         currentScore += scorePerNote * currentMultiplier;
         scoreText.text = "Score: " + currentScore;
 
+        // Apply damage if player is in attack mode
         if (playerAttack)
         {
+            playerUltraPunch.Play();
             enemyHp -= scorePerNote * currentMultiplier;
             enemy.triggerGetHitAnimation = true;
         }
+        // Randomly play one of the two normal hit sounds
+        else
+        {
+            if (Random.value > 0.5f)
+            {
+                playerHit1.Play();
+            }
+            else
+            {
+                playerHit2.Play();
+            }
+        }
 
     }
+
     public void NoteMiss()
     {
         mp = 0;
@@ -125,8 +145,12 @@ public class GameManager : MonoBehaviour
         currentMultiplier = 1;
         multiplierTracker = 0;
         multiText.text = "Multiplier: x" + currentMultiplier;
+
         playerHp -= scorePerNote * enemyMult;
         enemy.triggerHitAnimation = true;
         player.triggerGetHitAnimation = true;
+
+        // Play damage sound when a note is missed
+        damageSound.Play();
     }
 }
