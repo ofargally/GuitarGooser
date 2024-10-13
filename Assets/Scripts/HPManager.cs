@@ -22,7 +22,7 @@ public class HPManager : MonoBehaviour
         if (GameManager.instance.playerAttack && !isPlayer)
         {
             GameManager.instance.playerAttack = false;
-            if (currentFrame >= hpStates.Length - 1)
+            if (currentFrame >= hpStates.Length - 2)
             {
                 Debug.Log("you win");
                 SceneManager.LoadSceneAsync(2);

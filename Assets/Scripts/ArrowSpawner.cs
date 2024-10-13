@@ -31,6 +31,7 @@ public class ArrowSpawner : MonoBehaviour
     void Start()
     {
         beatInterval = 60f / bpm;
+        bpm /= 60f;
         timer = -startDelay;
 
         // Calculate arrow travel time
@@ -42,6 +43,7 @@ public class ArrowSpawner : MonoBehaviour
     {
         if (GameManager.instance.startPlaying && !GameManager.instance.gameOver)
         {
+
             timer += Time.deltaTime;
 
             if (timer >= beatInterval - arrowTravelTime)
@@ -96,15 +98,19 @@ public class ArrowSpawner : MonoBehaviour
                 {
                     case ArrowDirection.Left:
                         noteObject.keyToPress = KeyCode.LeftArrow;
+                        noteObject.ArrowDirection = (int)ArrowDirection.Left;
                         break;
                     case ArrowDirection.Down:
                         noteObject.keyToPress = KeyCode.DownArrow;
+                        noteObject.ArrowDirection = (int)ArrowDirection.Down;
                         break;
                     case ArrowDirection.Up:
                         noteObject.keyToPress = KeyCode.UpArrow;
+                        noteObject.ArrowDirection = (int)ArrowDirection.Up;
                         break;
                     case ArrowDirection.Right:
                         noteObject.keyToPress = KeyCode.RightArrow;
+                        noteObject.ArrowDirection = (int)ArrowDirection.Right;
                         break;
                 }
             }

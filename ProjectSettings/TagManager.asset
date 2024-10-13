@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: players
+    uniqueID: 1028339867
+    locked: 0
   - name: Arrows
     uniqueID: 1800781343
     locked: 0

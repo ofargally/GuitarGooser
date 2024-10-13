@@ -103,6 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 275
+  beatTempo: 126.4
+  ArrowDirection: 0
 --- !u!58 &4184786187201133661
 CircleCollider2D:
   m_ObjectHideFlags: 0
