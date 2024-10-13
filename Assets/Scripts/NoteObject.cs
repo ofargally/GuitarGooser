@@ -10,6 +10,9 @@ public class NoteObject : MonoBehaviour
 
     public int ArrowDirection;
     private bool obtained = false;
+
+    public GameObject hitEffect, missEffect;
+
     void Start()
     {
         beatTempo /= 60f;
@@ -23,6 +26,7 @@ public class NoteObject : MonoBehaviour
             GameManager.instance.NoteHit();
             obtained = true;
             gameObject.SetActive(false);
+            Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
         }
         //Left Arrow -> Moving to the right from negative X to Positive X
         if (ArrowDirection == 0)
@@ -59,10 +63,12 @@ public class NoteObject : MonoBehaviour
         if (other.CompareTag("Activator"))
         {
             canBePressed = false;
+            
             if (!obtained)
             {
                 GameManager.instance.NoteMiss();
                 gameObject.SetActive(false);
+                Instantiate(missEffect, transform.position, missEffect.transform.rotation);
             }
         }
     }
