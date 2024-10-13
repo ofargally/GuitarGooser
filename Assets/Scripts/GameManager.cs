@@ -127,6 +127,6 @@ public class GameManager : MonoBehaviour
         multiText.text = "Multiplier: x" + currentMultiplier;
         playerHp -= scorePerNote * enemyMult;
         enemy.triggerHitAnimation = true;
-        //player.triggerGetHitAnimation = true;
+        player.triggerGetHitAnimation = true;
     }
 }

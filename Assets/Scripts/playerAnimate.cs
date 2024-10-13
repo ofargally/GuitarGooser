@@ -66,6 +66,20 @@ public class PlayerAnimate : MonoBehaviour
     void ExecutePlayerUpdate()
     {
         timer += Time.deltaTime;
+        //Handle Animation for Receiving Damage
+        if (triggerGetHitAnimation && !isAnimating)
+        {
+            // Enemy is getting hit
+            if (GettingDamageSprites.Length > 0)
+            {
+                StartAnimation(GettingDamageSprites);
+                triggerGetHitAnimation = false; // Reset the flag
+            }
+            else
+            {
+                Debug.LogError("GettingDamageSprites array is empty. Please assign sprites in the Inspector.");
+            }
+        }
         // Handle Input for Hit Animations
         if (Input.GetKeyDown(KeyCode.UpArrow) && !isAnimating)
         {

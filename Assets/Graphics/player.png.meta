@@ -332,7 +332,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_7
+      name: playerUp2
       rect:
         serializedVersion: 2
         x: 1217
@@ -376,7 +376,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_9
+      name: dash1
       rect:
         serializedVersion: 2
         x: 1221
@@ -398,7 +398,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_10
+      name: dash2
       rect:
         serializedVersion: 2
         x: 1387
@@ -442,7 +442,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_12
+      name: PlayerUp1
       rect:
         serializedVersion: 2
         x: 155
@@ -500,19 +500,19 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       PlayerRight2: -8686113093718667696
-      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_10: 6098185916775656072
+      PlayerUp1: -6477840342913636197
+      dash1: 7543191882298238316
+      dash2: 6098185916775656072
       e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_11: -7748326359532767589
-      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_12: -6477840342913636197
       e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_13: 6559316766888222498
-      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_7: 1631722601454297454
       e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_8: 3708977798625634358
-      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_9: 7543191882298238316
       playerLeft1: -9093100295658299178
       playerLeft2: -5128656509004881290
       playerRight1: -6932621584334976900
       playerStill: 1951349016056676030
       playerStill2: -769327202316027091
       playerStill3: 211397520341836974
+      playerUp2: 1631722601454297454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -26,7 +26,8 @@ public class NoteObject : MonoBehaviour
             GameManager.instance.NoteHit();
             obtained = true;
             gameObject.SetActive(false);
-            Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
+            GameObject hitEffectObj = Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
+            Destroy(hitEffectObj, 1f);
         }
         //Left Arrow -> Moving to the right from negative X to Positive X
         if (ArrowDirection == 0)
@@ -63,12 +64,13 @@ public class NoteObject : MonoBehaviour
         if (other.CompareTag("Activator"))
         {
             canBePressed = false;
-            
+
             if (!obtained)
             {
                 GameManager.instance.NoteMiss();
                 gameObject.SetActive(false);
-                Instantiate(missEffect, transform.position, missEffect.transform.rotation);
+                GameObject missEffectobj = Instantiate(missEffect, transform.position, missEffect.transform.rotation);
+                Destroy(missEffectobj, 1f);
             }
         }
     }
