@@ -383,7 +383,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.004570093}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -393,7 +393,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 1, y: 0.25321335}
   m_EdgeRadius: 0
 --- !u!1001 &147718965
 PrefabInstance:
@@ -587,9 +587,10 @@ GameObject:
   m_Component:
   - component: {fileID: 254691488}
   - component: {fileID: 254691487}
+  - component: {fileID: 254691489}
   m_Layer: 0
-  m_Name: opponent_idle_0
-  m_TagString: Untagged
+  m_Name: Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -664,6 +665,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &254691489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254691486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15a2ddd616b34440aba36727570f30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentFrame: 0
+  frameRate: 0.1
+  idleFrameRate: 0.2
+  playerIdleSprites:
+  - {fileID: -4211751641688785407, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: -4580982677004813600, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: -5489986575022152564, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: -4477774402944893811, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  HitUpSprites: []
+  HitLeftSprites:
+  - {fileID: 1220776923918346800, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: 7712454750704929488, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: 5124650207548448636, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: 7143561367380648485, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: 5124650207548448636, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: 7712454750704929488, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: 1220776923918346800, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  HitRightSprites: []
+  GettingDamageSprites:
+  - {fileID: 1220776923918346800, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: -5099185937960940992, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: -720471761320553357, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: 4276086822361664321, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  - {fileID: 1220776923918346800, guid: b59a91742029f4066991c804c8b51430, type: 3}
+  triggerGetHitAnimation: 0
+  triggerHitAnimation: 0
 --- !u!1 &325538175
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +948,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.004570093}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -919,7 +958,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 1, y: 0.25321335}
   m_EdgeRadius: 0
 --- !u!1 &450328914
 GameObject:
@@ -1087,7 +1126,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.004570093}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1097,7 +1136,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 1, y: 0.25321335}
   m_EdgeRadius: 0
 --- !u!1 &515992356
 GameObject:
@@ -1400,7 +1439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 720, y: 274}
+  m_AnchoredPosition: {x: 720, y: 325}
   m_SizeDelta: {x: 204.27, y: 178.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &559079170
@@ -1435,9 +1474,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'prove to your music teacher that you are a true musician!
+  m_text: 'Prove to your music teacher that you are a true musician!
 
-    press any
+    Press any
     button to start'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1503,7 +1542,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -1353.35, y: 0, z: 89.65404, w: 55.500267}
+  m_margin: {x: -1366.8331, y: 0.00005331854, z: 89.65404, w: 55.500267}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2017,8 +2056,8 @@ MonoBehaviour:
   theMusic: {fileID: 515992357}
   songStartTime: 0
   startPlaying: 0
-  player: {fileID: 0}
-  enemy: {fileID: 0}
+  player: {fileID: 1348782762}
+  enemy: {fileID: 254691489}
   currentScore: 0
   opponentScore: 0
   scorePerNote: 1
@@ -2069,8 +2108,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.87, y: -271.85}
-  m_SizeDelta: {x: 1100.81, y: 58.3}
+  m_AnchoredPosition: {x: -4.87, y: -336}
+  m_SizeDelta: {x: 1100.81, y: 66.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1144277479
 MonoBehaviour:
@@ -2104,10 +2143,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'create combos to charge the blue bar!
+  m_text: 'Tutorial
 
-    your hits start doing damage
-    after the bar is full'
+    1. create combos to charge the blue bar!
+
+    your hits
+    start doing damage after the bar is full
+
+    2. Missing Arrows will lead to
+    your demise!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2172,7 +2216,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -2.586792, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2487,9 +2531,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1348782761}
   - component: {fileID: 1348782760}
+  - component: {fileID: 1348782762}
   m_Layer: 0
-  m_Name: e5dc2ae954f63e7549582a835a6e9e32_0
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2564,6 +2609,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1348782762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348782759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15a2ddd616b34440aba36727570f30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentFrame: 0
+  frameRate: 0.1
+  idleFrameRate: 0.2
+  playerIdleSprites:
+  - {fileID: -5115618752126089108, guid: 12a91d05d1d6047b9a54c113d7300ba8, type: 3}
+  - {fileID: -5050664382621690000, guid: 12a91d05d1d6047b9a54c113d7300ba8, type: 3}
+  - {fileID: -5937766766644145194, guid: 12a91d05d1d6047b9a54c113d7300ba8, type: 3}
+  - {fileID: 6213080392227812279, guid: 12a91d05d1d6047b9a54c113d7300ba8, type: 3}
+  HitUpSprites:
+  - {fileID: -8686113093718667696, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: -9093100295658299178, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: -6477840342913636197, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: 1631722601454297454, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: -6477840342913636197, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: 1951349016056676030, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  HitLeftSprites:
+  - {fileID: 6213080392227812279, guid: 12a91d05d1d6047b9a54c113d7300ba8, type: 3}
+  - {fileID: -9093100295658299178, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: -5128656509004881290, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: -9093100295658299178, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: -8686113093718667696, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  HitRightSprites:
+  - {fileID: -769327202316027091, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: 211397520341836974, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: -6932621584334976900, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: 211397520341836974, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: 1951349016056676030, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  GettingDamageSprites:
+  - {fileID: -5050664382621690000, guid: 12a91d05d1d6047b9a54c113d7300ba8, type: 3}
+  - {fileID: -7748326359532767589, guid: 6b006d5701a974224923622751d1c969, type: 3}
+  - {fileID: -5050664382621690000, guid: 12a91d05d1d6047b9a54c113d7300ba8, type: 3}
+  triggerGetHitAnimation: 0
+  triggerHitAnimation: 0
 --- !u!1 &1392113487
 GameObject:
   m_ObjectHideFlags: 0
@@ -3691,7 +3781,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.004570093}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3701,7 +3791,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 1, y: 0.25321335}
   m_EdgeRadius: 0
 --- !u!1 &1971809611
 GameObject:
