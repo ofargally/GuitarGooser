@@ -12,53 +12,36 @@ public class MPManager : MonoBehaviour
 
     public bool isPlayer;
 
+    private int currentMp;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        currentMp = GameManager.instance.mp;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isPlayer)
+        if(GameManager.instance.mp > currentMp)
         {
-            if (GameManager.instance.currentScore > 99)
+            currentMp = GameManager.instance.mp;
+            if (currentFrame < mpStates.Length - 1)
             {
-                GameManager.instance.currentScore -= 100;
-                if (currentFrame >= mpStates.Length - 1)
-                {
-                    currentFrame = 0;
-                    GameManager.instance.playerAttack = true;
-                    Debug.Log("player attack charged");
-                }
-                else
-                {
-                    currentFrame++;
-                    spriteRenderer.sprite = mpStates[currentFrame];
-                }
+                currentFrame++;
+                spriteRenderer.sprite = mpStates[currentFrame];
+                
             }
-
+            
         }
-        else
+        else if(GameManager.instance.mp == 0)
         {
-            if (GameManager.instance.opponentScore > 99)
-            {
-                GameManager.instance.opponentScore -= 100;
-                if (currentFrame >= mpStates.Length - 1)
-                {
-                    currentFrame = 0;
-                    GameManager.instance.opponentAttack = true;
-                    Debug.Log("opponent attack charged");
-                }
-                else
-                {
-                    currentFrame++;
-                    spriteRenderer.sprite = mpStates[currentFrame];
-                }
-            }
+            currentMp = 0;
+            currentFrame = 0;
+            spriteRenderer.sprite = mpStates[currentFrame];
         }
-
     }
 
 }

@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
 
@@ -14,7 +16,7 @@ public class GameManager : MonoBehaviour
     public int opponentScore;
 
 
-    public int scorePerNote = 100;
+    public int scorePerNote = 1;
 
     public int currentMultiplier;
     public int multiplierTracker;
@@ -30,6 +32,8 @@ public class GameManager : MonoBehaviour
 
     public int playerHp;
     public int enemyHp;
+    public int enemyMult;
+    public int mp = 0;
 
     void Awake()
     {
@@ -62,10 +66,29 @@ public class GameManager : MonoBehaviour
         {
             gameOver = true;
         }
+
+        if (playerHp < 0)
+        {
+            Debug.Log("opponent win");
+            SceneManager.LoadSceneAsync(1);
+        }
+
+        if(enemyHp < 0)
+        {
+            Debug.Log("you win");
+            SceneManager.LoadSceneAsync(2);
+        }
+
+        if (mp > 7)
+        {
+            playerAttack = true;
+            Debug.Log("player can attack now");
+        }
     }
 
     public void NoteHit()
     {
+        mp++;
         Debug.Log("Hit on time");
         if (currentMultiplier - 1 < multiplierThresholds.Length)
         {
@@ -83,25 +106,22 @@ public class GameManager : MonoBehaviour
 
         currentScore += scorePerNote * currentMultiplier;
         scoreText.text = "Score: " + currentScore;
-        int opScoreChance = Random.Range(0, 10);
-        if (opScoreChance > 2)
+
+        if (playerAttack)
         {
-            opponentScore += scorePerNote;
+            enemyHp -= scorePerNote * currentMultiplier;
         }
+        
     }
 
     public void NoteMiss()
     {
+        mp = 0;
         Debug.Log("Missed note");
 
         currentMultiplier = 1;
         multiplierTracker = 0;
         multiText.text = "Multiplier: x" + currentMultiplier;
-
-        int opScoreChance = Random.Range(0, 10);
-        if (opScoreChance > 2)
-        {
-            opponentScore += scorePerNote;
-        }
+        playerHp -= scorePerNote * enemyMult;
     }
 }

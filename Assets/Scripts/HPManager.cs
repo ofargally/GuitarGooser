@@ -7,7 +7,7 @@ public class HPManager : MonoBehaviour
     public Sprite[] hpStates;
     private int currentFrame = 0;
     public bool isPlayer;
-
+    public int threshold = 100;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,34 +19,41 @@ public class HPManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance.playerAttack && !isPlayer)
+
+        if (!isPlayer)
         {
-            GameManager.instance.playerAttack = false;
             if (currentFrame >= hpStates.Length - 2)
             {
-                Debug.Log("you win");
-                SceneManager.LoadSceneAsync(2);
+
                 currentFrame = 0;
             }
             else
             {
-                currentFrame++;
-                spriteRenderer.sprite = hpStates[currentFrame];
+                if (GameManager.instance.enemyHp < threshold)
+                {
+                    threshold -= 10;
+                    currentFrame++;
+                    spriteRenderer.sprite = hpStates[currentFrame];
+                }
+                
             }
         }
-        else if (GameManager.instance.opponentAttack && isPlayer)
+        else if (isPlayer)
         {
-            GameManager.instance.opponentAttack = false;
-            if (currentFrame >= hpStates.Length - 1)
+            if (currentFrame >= hpStates.Length - 2)
             {
-                Debug.Log("opponent win");
-                SceneManager.LoadSceneAsync(1);
+
                 currentFrame = 0;
             }
             else
             {
-                currentFrame++;
-                spriteRenderer.sprite = hpStates[currentFrame];
+                if (GameManager.instance.playerHp < threshold)
+                {
+                    threshold -= 10;
+                    currentFrame++;
+                    spriteRenderer.sprite = hpStates[currentFrame];
+                }
+
             }
         }
     }
