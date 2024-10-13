@@ -113,6 +113,7 @@ public class GameManager : MonoBehaviour
         if (playerAttack)
         {
             enemyHp -= scorePerNote * currentMultiplier;
+            enemy.triggerGetHitAnimation = true;
         }
 
     }
@@ -125,5 +126,7 @@ public class GameManager : MonoBehaviour
         multiplierTracker = 0;
         multiText.text = "Multiplier: x" + currentMultiplier;
         playerHp -= scorePerNote * enemyMult;
+        enemy.triggerHitAnimation = true;
+        //player.triggerGetHitAnimation = true;
     }
 }

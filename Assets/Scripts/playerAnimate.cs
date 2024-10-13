@@ -6,6 +6,7 @@ public class PlayerAnimate : MonoBehaviour
     private float timer = 0f;
     public int currentFrame = 0;
     public float frameRate = 0.1f;
+    public float idleFrameRate = 0.2f;
     private SpriteRenderer spriteRenderer;
 
     // Sprite Arrays
@@ -14,6 +15,9 @@ public class PlayerAnimate : MonoBehaviour
     public Sprite[] HitLeftSprites;
     public Sprite[] HitRightSprites;
     public Sprite[] GettingDamageSprites;
+
+    public bool triggerGetHitAnimation = false;
+    public bool triggerHitAnimation = false;
 
     // Animation State Variables
     private bool isAnimating = false;
@@ -38,6 +42,30 @@ public class PlayerAnimate : MonoBehaviour
     {
         timer += Time.deltaTime;
 
+        if (gameObject.CompareTag("Player"))
+        {
+            ExecutePlayerUpdate();
+        }
+        else
+        {
+            ExecuteEnemyUpdate();
+        }
+
+        // Continue Animating if an Animation is Active
+        if (isAnimating)
+        {
+            Animate();
+        }
+        else
+        {
+            // Handle Idle Animation Loop
+            HandleIdleAnimation();
+        }
+    }
+
+    void ExecutePlayerUpdate()
+    {
+        timer += Time.deltaTime;
         // Handle Input for Hit Animations
         if (Input.GetKeyDown(KeyCode.UpArrow) && !isAnimating)
         {
@@ -83,19 +111,37 @@ public class PlayerAnimate : MonoBehaviour
                 Debug.LogError("HitRightSprites array is empty. Please assign sprites in the Inspector.");
             }
         }
-
-        // Continue Animating if an Animation is Active
-        if (isAnimating)
+    }
+    void ExecuteEnemyUpdate()
+    {
+        if (triggerHitAnimation && !isAnimating)
         {
-            Animate();
+            // Enemy is hitting the player
+            if (HitLeftSprites.Length > 0) // Choose appropriate animation
+            {
+                StartAnimation(HitLeftSprites);
+                triggerHitAnimation = false; // Reset the flag
+            }
+            else
+            {
+                Debug.LogError("HitLeftSprites array is empty. Please assign sprites in the Inspector.");
+            }
         }
-        else
+
+        if (triggerGetHitAnimation && !isAnimating)
         {
-            // Handle Idle Animation Loop
-            HandleIdleAnimation();
+            // Enemy is getting hit
+            if (GettingDamageSprites.Length > 0)
+            {
+                StartAnimation(GettingDamageSprites);
+                triggerGetHitAnimation = false; // Reset the flag
+            }
+            else
+            {
+                Debug.LogError("GettingDamageSprites array is empty. Please assign sprites in the Inspector.");
+            }
         }
     }
-
     // Start the specified animation
     void StartAnimation(Sprite[] frames)
     {
@@ -150,9 +196,9 @@ public class PlayerAnimate : MonoBehaviour
         if (playerIdleSprites.Length == 0)
             return;
 
-        if (timer >= frameRate)
+        if (timer >= idleFrameRate)
         {
-            timer -= frameRate;
+            timer -= idleFrameRate;
             currentFrame++;
 
             if (currentFrame < playerIdleSprites.Length)
