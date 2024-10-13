@@ -116,10 +116,6 @@ public class GameManager : MonoBehaviour
         }
 
     }
-    public void AnimatePlayerHit()
-    {
-        player.PlayerHit();
-    }
     public void NoteMiss()
     {
         mp = 0;

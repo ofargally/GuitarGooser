@@ -90,7 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -178,7 +178,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_0
+      name: playerStill
       rect:
         serializedVersion: 2
         x: 155
@@ -186,7 +186,7 @@ TextureImporter:
         width: 86
         height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -200,7 +200,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_1
+      name: playerLeft1
       rect:
         serializedVersion: 2
         x: 539
@@ -208,7 +208,7 @@ TextureImporter:
         width: 110
         height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -222,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_2
+      name: playerLeft2
       rect:
         serializedVersion: 2
         x: 917
@@ -230,7 +230,7 @@ TextureImporter:
         width: 134
         height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -244,7 +244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_3
+      name: playerStill2
       rect:
         serializedVersion: 2
         x: 1307
@@ -252,7 +252,7 @@ TextureImporter:
         width: 86
         height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -266,7 +266,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_4
+      name: playerStill3
       rect:
         serializedVersion: 2
         x: 155
@@ -274,7 +274,7 @@ TextureImporter:
         width: 74
         height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -288,7 +288,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_5
+      name: playerRight1
       rect:
         serializedVersion: 2
         x: 539
@@ -296,7 +296,7 @@ TextureImporter:
         width: 104
         height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -310,7 +310,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_6
+      name: PlayerRight2
       rect:
         serializedVersion: 2
         x: 923
@@ -318,7 +318,7 @@ TextureImporter:
         width: 86
         height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -335,12 +335,12 @@ TextureImporter:
       name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_7
       rect:
         serializedVersion: 2
-        x: 1301
+        x: 1217
         y: 467
-        width: 80
-        height: 236
+        width: 246
+        height: 238
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -357,12 +357,12 @@ TextureImporter:
       name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_8
       rect:
         serializedVersion: 2
-        x: 1385
-        y: 599
+        x: 1479
+        y: 735
         width: 32
         height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -379,12 +379,12 @@ TextureImporter:
       name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_9
       rect:
         serializedVersion: 2
-        x: 1223
-        y: 521
+        x: 1221
+        y: 722
         width: 62
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -401,12 +401,12 @@ TextureImporter:
       name: e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_10
       rect:
         serializedVersion: 2
-        x: 1397
-        y: 527
+        x: 1387
+        y: 793
         width: 56
-        height: 56
+        height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -428,7 +428,7 @@ TextureImporter:
         width: 44
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -450,7 +450,7 @@ TextureImporter:
         width: 74
         height: 206
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -472,7 +472,7 @@ TextureImporter:
         width: 50
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -489,7 +489,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8b2f7d72c21a94fa4ba0618c072271b1
     internalID: 0
     vertices: []
     indices: 
@@ -499,20 +499,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_0: 1951349016056676030
-      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_1: -9093100295658299178
+      PlayerRight2: -8686113093718667696
       e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_10: 6098185916775656072
       e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_11: -7748326359532767589
       e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_12: -6477840342913636197
       e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_13: 6559316766888222498
-      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_2: -5128656509004881290
-      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_3: -769327202316027091
-      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_4: 211397520341836974
-      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_5: -6932621584334976900
-      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_6: -8686113093718667696
       e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_7: 1631722601454297454
       e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_8: 3708977798625634358
       e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_9: 7543191882298238316
+      playerLeft1: -9093100295658299178
+      playerLeft2: -5128656509004881290
+      playerRight1: -6932621584334976900
+      playerStill: 1951349016056676030
+      playerStill2: -769327202316027091
+      playerStill3: 211397520341836974
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
