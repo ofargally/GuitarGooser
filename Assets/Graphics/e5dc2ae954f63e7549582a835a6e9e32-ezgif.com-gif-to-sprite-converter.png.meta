@@ -76,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,7 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,10 +111,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
+    maxTextureSize: 256
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -498,7 +498,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_0: 1951349016056676030
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_1: -9093100295658299178
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_10: 6098185916775656072
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_11: -7748326359532767589
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_12: -6477840342913636197
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_13: 6559316766888222498
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_2: -5128656509004881290
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_3: -769327202316027091
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_4: 211397520341836974
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_5: -6932621584334976900
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_6: -8686113093718667696
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_7: 1631722601454297454
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_8: 3708977798625634358
+      e5dc2ae954f63e7549582a835a6e9e32-ezgif.com-gif-to-sprite-converter_9: 7543191882298238316
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

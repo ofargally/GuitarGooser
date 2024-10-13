@@ -73,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -87,7 +87,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,10 +108,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
+    maxTextureSize: 256
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -473,7 +473,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      opponent_idle_0: -4211751641688785407
+      opponent_idle_1: -4580982677004813600
+      opponent_idle_10: 7650156571699175350
+      opponent_idle_11: -720471761320553357
+      opponent_idle_12: 4276086822361664321
+      opponent_idle_2: -5489986575022152564
+      opponent_idle_3: -4477774402944893811
+      opponent_idle_4: 5124650207548448636
+      opponent_idle_5: 7712454750704929488
+      opponent_idle_6: 7143561367380648485
+      opponent_idle_7: 1220776923918346800
+      opponent_idle_8: -8236341922275929249
+      opponent_idle_9: -5099185937960940992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
